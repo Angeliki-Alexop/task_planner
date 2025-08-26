@@ -1,4 +1,3 @@
-# task_planner
 Help me create this with next.js
 I want to create a simple web app for local use to help me plan and do the task I have.
 I am imagining it like a over simplified version of bitbucket when I can open schedule tasks (tickets) plus a time span and then close them if I did them and how many hours are spent.
