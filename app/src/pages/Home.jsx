@@ -2,6 +2,7 @@ import React from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { getTasks } from "../db/tasks";
+import "./Home.css";
 
 export default function Home() {
   const tasks = getTasks();
@@ -21,19 +22,10 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className="home-container">
       <h1>Welcome to Task Planner!</h1>
       <p>Create and view your tasks.</p>
       <Calendar tileClassName={tileClassName} />
-      {/* Add some style for colored days */}
-      <style>
-        {`
-          .task-day {
-            background: #ffeb3b !important;
-            border-radius: 50%;
-          }
-        `}
-      </style>
     </div>
   );
 }
