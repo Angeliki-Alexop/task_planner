@@ -1,0 +1,31 @@
+.tasks-container {
+  max-width: 600px;
+  margin: 40px 0 0 40px; /* Top, right, bottom, left */
+}
+
+.task-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  padding: 20px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-title {
+  font-weight: bold;
+  color: #1976d2;
+  margin-bottom: 6px;
+}
+
+.delete-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}

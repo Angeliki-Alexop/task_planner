@@ -14,3 +14,9 @@ export function addTask(task) {
 export function clearTasks() {
   localStorage.removeItem(TASKS_KEY);
 }
+
+export function deleteTask(index) {
+  const tasks = getTasks();
+  tasks.splice(index, 1);
+  localStorage.setItem(TASKS_KEY, JSON.stringify(tasks));
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { addTask } from "../db/tasks";
+import "./AddTask.css";
 
 export default function AddTask() {
   const [desc, setDesc] = useState("");
@@ -23,25 +24,37 @@ export default function AddTask() {
   }
 
   return (
-    <div>
-      <h2>Add Task</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Description:</label>
-          <input value={desc} onChange={e => setDesc(e.target.value)} required />
-        </div>
-        <div>
-          <label>Date:</label>
-          <input type="date" value={date} onChange={e => setDate(e.target.value)} required />
-        </div>
-        <div>
-          <label>Start Time:</label>
-          <input type="time" value={start} onChange={e => setStart(e.target.value)} required />
-        </div>
-        <div>
-          <label>Hours Needed:</label>
-          <input type="number" step="0.1" value={hours} onChange={e => setHours(e.target.value)} required />
-        </div>
+    <div className="add-task-container">
+      <h2 className="add-task-title">Add Task</h2>
+      <form className="add-task-form" onSubmit={handleSubmit}>
+        <label>Description:</label>
+        <input
+          value={desc}
+          onChange={e => setDesc(e.target.value)}
+          required
+        />
+        <label>Date:</label>
+        <input
+          type="date"
+          value={date}
+          onChange={e => setDate(e.target.value)}
+          required
+        />
+        <label>Start Time:</label>
+        <input
+          type="time"
+          value={start}
+          onChange={e => setStart(e.target.value)}
+          required
+        />
+        <label>Hours Needed:</label>
+        <input
+          type="number"
+          step="0.1"
+          value={hours}
+          onChange={e => setHours(e.target.value)}
+          required
+        />
         <button type="submit">Add</button>
       </form>
     </div>

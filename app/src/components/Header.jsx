@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 export default function Header() {
   return (
-    <nav style={{ marginBottom: "20px" }}>
-      <Link to="/" style={{ marginRight: "10px" }}>Home</Link>
-      <Link to="/add" style={{ marginRight: "10px" }}>Add Task</Link>
-      <Link to="/tasks">Tasks</Link>
+    <nav className="header-nav">
+      <Link to="/" className="header-link">Home</Link>
+      <Link to="/add" className="header-link">Add Task</Link>
+      <Link to="/tasks" className="header-link">Tasks</Link>
     </nav>
   );
 }
